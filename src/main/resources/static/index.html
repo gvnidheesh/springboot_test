@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Test Table</title>
+</head>
+<body>
+	<h1>Test Table</h1>
+	<form id="loadForm">
+		<button type="submit">Submit</button>
+	</form>
+
+	<p id="progress" style="display: none;">Loading...</p>
+
+	<table id="resultTable" border="1" cellpadding="6" style="margin-top: 12px; display: none;">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	<script>
+		document.getElementById('loadForm').addEventListener('submit', function (event) {
+			event.preventDefault();
+			document.getElementById('resultTable').style.display = 'none';
+			document.getElementById('progress').style.display = 'block';
+			fetch('/hello')
+				.then(function (response) { return response.json(); })
+				.then(function (json) {
+					var tbody = document.querySelector('#resultTable tbody');
+					tbody.innerHTML = '';
+					json.data.forEach(function (row) {
+						var tr = document.createElement('tr');
+						tr.innerHTML = '<td>' + row.id + '</td><td>' + row.name + '</td>';
+						tbody.appendChild(tr);
+					});
+					document.getElementById('resultTable').style.display = 'table';
+				})
+				.finally(function () {
+					document.getElementById('progress').style.display = 'none';
+				});
+		});
+	</script>
+</body>
+</html>
