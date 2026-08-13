@@ -29,4 +29,10 @@ public class HelloController {
 				"hikariAutoCommit", hikariDataSource.isAutoCommit());
 	}
 
+	@GetMapping("/load")
+	public Map<String, Object> load() {
+		Integer result = jdbcTemplate.queryForObject("select 1", Integer.class);
+		return Map.of("result", result);
+	}
+
 }
