@@ -1,2 +1,4 @@
-/mvnw text eol=lf
-*.cmd text eol=crlf
+* text=auto
+*.properties text eol=lf
+*.sql text eol=lf
+*.java text eol=lf
