@@ -1,0 +1,97 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-13T12:22:34.063+05:30  INFO 12448 --- [test] [           main] in.cdipd.test.TestApplication            : Starting TestApplication using Java 21.0.12 with PID 12448 (D:\Repository\springboot_test\target\classes started by kudsit in d:\Repository\springboot_test)
+2026-08-13T12:22:34.067+05:30  INFO 12448 --- [test] [           main] in.cdipd.test.TestApplication            : The following 1 profile is active: "prod"
+2026-08-13T12:22:34.809+05:30  INFO 12448 --- [test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-13T12:22:34.841+05:30  INFO 12448 --- [test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2026-08-13T12:22:35.573+05:30  INFO 12448 --- [test] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9080 (http)
+2026-08-13T12:22:35.600+05:30  INFO 12448 --- [test] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T12:22:35.600+05:30  INFO 12448 --- [test] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T12:22:35.669+05:30  INFO 12448 --- [test] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1552 ms
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : TestHikariPool - configuration:
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : credentials.....................com.zaxxer.hikari.util.Credentials@8f40022
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : credentialsProvider.............none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : credentialsProviderClassName....none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.postgresql.Driver"
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : exceptionOverride...............none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:postgresql://testdb.cluster-ch6iwaqqmi9m.ap-south-1.rds.amazonaws.com:5432/test
+2026-08-13T12:22:36.045+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : keepaliveTime...................120000
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................5
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : poolName........................"TestHikariPool"
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2026-08-13T12:22:36.058+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2026-08-13T12:22:36.059+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2026-08-13T12:22:36.059+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2026-08-13T12:22:36.059+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2026-08-13T12:22:36.059+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : username........................"postgres"
+2026-08-13T12:22:36.059+05:30 DEBUG 12448 --- [test] [           main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2026-08-13T12:22:36.059+05:30  INFO 12448 --- [test] [           main] com.zaxxer.hikari.HikariDataSource       : TestHikariPool - Starting...
+2026-08-13T12:22:37.453+05:30  INFO 12448 --- [test] [           main] com.zaxxer.hikari.pool.HikariPool        : TestHikariPool - Added connection org.postgresql.jdbc.PgConnection@6f1fa1d0
+2026-08-13T12:22:37.453+05:30  INFO 12448 --- [test] [           main] com.zaxxer.hikari.HikariDataSource       : TestHikariPool - Start completed.
+2026-08-13T12:22:37.594+05:30  INFO 12448 --- [test] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://testdb.cluster-ch6iwaqqmi9m.ap-south-1.rds.amazonaws.com:5432/test (PostgreSQL 18.4)
+2026-08-13T12:22:38.786+05:30  INFO 12448 --- [test] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.308s)
+2026-08-13T12:22:39.924+05:30  INFO 12448 --- [test] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 7
+2026-08-13T12:22:40.030+05:30  INFO 12448 --- [test] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-08-13T12:22:40.761+05:30  INFO 12448 --- [test] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-13T12:22:40.846+05:30  INFO 12448 --- [test] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-13T12:22:41.423+05:30  INFO 12448 --- [test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-13T12:22:42.080+05:30  INFO 12448 --- [test] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://testdb.cluster-ch6iwaqqmi9m.ap-south-1.rds.amazonaws.com:5432/test]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.4
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-13T12:22:42.608+05:30  INFO 12448 --- [test] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-13T12:22:43.090+05:30  INFO 12448 --- [test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-13T12:22:43.173+05:30  WARN 12448 --- [test] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-13T12:22:43.219+05:30  INFO 12448 --- [test] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-13T12:22:43.640+05:30  INFO 12448 --- [test] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9080 (http) with context path '/'
+2026-08-13T12:22:43.647+05:30  INFO 12448 --- [test] [           main] in.cdipd.test.TestApplication            : Started TestApplication in 10.125 seconds (process running for 10.631)
+{id=1, name=Name1}
+2026-08-13T12:22:43.902+05:30  INFO 12448 --- [test] [nio-9080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T12:22:43.906+05:30  INFO 12448 --- [test] [nio-9080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T12:22:43.906+05:30  INFO 12448 --- [test] [nio-9080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.1.0:run (default-cli) on project test: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

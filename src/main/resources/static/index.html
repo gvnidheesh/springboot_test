@@ -5,6 +5,12 @@
 <title>Test Table</title>
 </head>
 <body>
+	<div id="statusCheck">
+		<p id="statusMessage">Checking dependencies...</p>
+	</div>
+
+	<div id="appContent" style="display: none;">
+
 	<h1>Test Table</h1>
 	<form id="loadForm">
 		<button type="submit">Submit</button>
@@ -43,6 +49,84 @@
 					document.getElementById('progress').style.display = 'none';
 				});
 		});
+	</script>
+
+	<h1>Load Cache</h1>
+	<form id="loadCacheForm">
+		<label>App Time Slot ID: <input type="number" id="appTimeSlotId" value="17" required></label>
+		<label style="margin-left: 12px;">Sem ID: <input type="number" id="semId" value="1" required></label>
+		<button type="submit" style="margin-left: 12px;">Load</button>
+	</form>
+
+	<p id="loadCacheResult"></p>
+	<p id="loadCacheCountdown"></p>
+
+	<script>
+		var countdownTimer = null;
+
+		function fetchLoadCache(appTimeSlotId, semId) {
+			return fetch('/loadcache?appTimeSlotId=' + appTimeSlotId + '&semId=' + semId)
+				.then(function (response) { return response.json(); });
+		}
+
+		function updateCountdownText(remaining) {
+			document.getElementById('loadCacheCountdown').textContent = 'Cache expires in ' + remaining + 's';
+		}
+
+		function startCountdown(appTimeSlotId, semId, seconds) {
+			clearInterval(countdownTimer);
+			var remaining = seconds;
+			updateCountdownText(remaining);
+			countdownTimer = setInterval(function () {
+				remaining -= 1;
+				if (remaining <= 0) {
+					clearInterval(countdownTimer);
+					document.getElementById('loadCacheCountdown').textContent = 'Refreshing...';
+					fetchLoadCache(appTimeSlotId, semId).then(function (json) {
+						renderLoadCache(appTimeSlotId, semId, json);
+					});
+				} else {
+					updateCountdownText(remaining);
+				}
+			}, 1000);
+		}
+
+		function renderLoadCache(appTimeSlotId, semId, json) {
+			document.getElementById('loadCacheResult').textContent =
+				'result=' + json.result + '  source=' + json.source;
+			startCountdown(appTimeSlotId, semId, json.ttlRemainingSeconds);
+		}
+
+		document.getElementById('loadCacheForm').addEventListener('submit', function (event) {
+			event.preventDefault();
+			var appTimeSlotId = document.getElementById('appTimeSlotId').value;
+			var semId = document.getElementById('semId').value;
+			fetchLoadCache(appTimeSlotId, semId).then(function (json) {
+				renderLoadCache(appTimeSlotId, semId, json);
+			});
+		});
+	</script>
+
+	</div>
+
+	<script>
+		fetch('/status')
+			.then(function (response) { return response.json(); })
+			.then(function (status) {
+				var statusMessage = document.getElementById('statusMessage');
+				if (status.allUp) {
+					document.getElementById('appContent').style.display = 'block';
+					statusMessage.textContent = '';
+					document.getElementById('statusCheck').style.display = 'none';
+				} else {
+					statusMessage.innerHTML =
+						'Database: ' + (status.db ? '✔' : '✖') + '&nbsp;&nbsp;' +
+						'Redis: ' + (status.redis ? '✔' : '✖');
+				}
+			})
+			.catch(function () {
+				document.getElementById('statusMessage').textContent = '✖ Unable to reach server';
+			});
 	</script>
 </body>
 </html>
